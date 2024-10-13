@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FlipKart</string>
+
+    <string name="initDescription">Log in for the Best Experience</string>
+
+    <string name="initDescription_2">Enter phone number and Email Address to continue.</string>
+    <string name="initDescription_signup_2">Enter phone number and Email Address to continue.</string>
+
+    <string name="terms_text">
+    By continuing, you agree to Flipkart's
+    <font color="#0071DC">Terms of Use</font> and
+    <font color="#0071DC">Privacy Policy</font>
+</string>
+
+</resources>

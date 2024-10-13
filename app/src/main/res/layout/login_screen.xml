@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/blueBackgrounddiv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#0071DC"
+        android:padding="16dp">
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/flipkart_logo2"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="215dp"/>
+
+
+    <!-- Phone Number Input -->
+
+    <TextView
+        android:id="@+id/LeftOfLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/logoImageView"
+        android:layout_marginStart="-120dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:text="Flipkart"
+        android:textSize="35sp"
+        android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Initial_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blueBackgrounddiv"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:text="@string/initDescription"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Initial_Description_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Initial_Description"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/initDescription_2"
+        android:textSize="16sp" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Initial_Description_2"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="8dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/etPhoneNumber"
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        android:drawablePadding="8dp" />
+
+
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_text"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="40dp"
+        android:layout_below="@id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="16dp" />
+
+    <!-- Terms and Privacy Policy -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@id/tvTerms"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#0071DC"
+        android:enabled="false"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>
+
+
