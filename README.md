@@ -8,9 +8,7 @@ This project is a simple Android app that replicates the user interface of Flipk
 To set up and run this project locally:
 
 1. **Clone the Repository**:
-   ```bash
-   git clone <repository_url>
-   ```
+    git clone https://github.com/Mohamad-HuzaiFA/Flipkart.git
    
 2. **Open the Project in Android Studio**:
    - Launch Android Studio and select `Open an existing project`.
