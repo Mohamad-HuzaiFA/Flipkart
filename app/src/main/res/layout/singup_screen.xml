@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
-
+    tools:context=".activities.SignupActivity">
 
     <RelativeLayout
         android:id="@+id/blueBackgrounddiv"
@@ -13,18 +12,16 @@
         android:layout_height="100dp"
         android:background="#0071DC"
         android:padding="16dp">
+
         <ImageView
             android:id="@+id/logoImageView"
             android:layout_width="wrap_content"
             android:layout_height="115dp"
-            android:contentDescription="TODO"
+            android:contentDescription="Flipkart Logo"
             android:src="@drawable/flipkart_logo2"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:layout_marginStart="215dp"/>
-
-
-        <!-- Phone Number Input -->
+            android:layout_marginStart="215dp" />
 
         <TextView
             android:id="@+id/LeftOfLogo"
@@ -38,7 +35,6 @@
             android:text="Flipkart"
             android:textSize="35sp"
             android:textStyle="italic" />
-
     </RelativeLayout>
 
     <TextView
@@ -77,7 +73,8 @@
         android:hint="UserName"
         android:inputType="textPersonName"
         android:padding="12dp" />
-    
+
+    <!-- Email -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -118,7 +115,6 @@
         android:layout_marginTop="25dp"
         android:paddingHorizontal="16dp" />
 
-    <!-- Terms and Privacy Policy -->
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="match_parent"
@@ -129,11 +125,8 @@
         android:layout_marginTop="200dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#0071DC"
-        android:enabled="false"
         android:text="SIGNUP"
         android:textColor="#FFFFFF" />
 
-
 </RelativeLayout>
-
 

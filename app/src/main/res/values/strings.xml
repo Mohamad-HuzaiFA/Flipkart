@@ -7,9 +7,10 @@
     <string name="initDescription_signup_2">Enter phone number and Email Address to continue.</string>
 
     <string name="terms_text">
-    By continuing, you agree to Flipkart's
+    By continuing, you agree to Flipkart
     <font color="#0071DC">Terms of Use</font> and
     <font color="#0071DC">Privacy Policy</font>
 </string>
+
 
 </resources>

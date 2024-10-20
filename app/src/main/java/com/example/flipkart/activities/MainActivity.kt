@@ -1,4 +1,4 @@
-package com.example.flipkart
+package com.example.flipkart.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
