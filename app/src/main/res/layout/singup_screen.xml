@@ -4,54 +4,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context="SignupActivity">
 
 
     <RelativeLayout
-        android:id="@+id/blueBackgrounddiv"
+        android:id="@+id/blueBackgrounddiv_"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#0071DC"
         android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/flipkartText_"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="25dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/white"
+                android:text="Flipkart"
+                android:textSize="35sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/logoImageView_"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flipkart_logo2"/>
+
+            <!-- Flipkart Text -->
+
+
+        </LinearLayout>
+        <!-- Skip Arrow Icon and Text -->
         <ImageView
-            android:id="@+id/logoImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="115dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/flipkart_logo2"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:layout_marginStart="215dp"/>
-
-
-        <!-- Phone Number Input -->
+            android:id="@+id/skipIcon_"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp"
+            android:src="@drawable/outline_arrow_right_alt_24"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:contentDescription="Skip" />
 
         <TextView
-            android:id="@+id/LeftOfLogo"
+            android:id="@+id/skipText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/logoImageView"
-            android:layout_marginStart="-120dp"
-            android:layout_marginTop="9dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/white"
-            android:text="Flipkart"
-            android:textSize="35sp"
-            android:textStyle="italic" />
+            android:layout_below="@id/skipIcon_"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="Skip"
+            android:textSize="12sp"
+            android:textColor="@android:color/white" />
 
     </RelativeLayout>
+
 
     <TextView
         android:id="@+id/Initial_Descriptionsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/blueBackgrounddiv"
+        android:layout_below="@id/blueBackgrounddiv_"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-medium"
         android:textColor="@color/black"
         android:text="Sign up to create an Account"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium" />
 
     <TextView
         android:id="@+id/Initial_Descriptionsignup_2"
@@ -60,13 +88,13 @@
         android:layout_below="@id/Initial_Descriptionsignup"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        android:fontFamily="sans-serif-medium"
         android:text="Enter the required Information."
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
 
     <!-- UserName -->
     <EditText
-        android:id="@+id/UserNameId"
+        android:id="@+id/UserNameId_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Initial_Descriptionsignup_2"
@@ -77,26 +105,27 @@
         android:hint="UserName"
         android:inputType="textPersonName"
         android:padding="12dp" />
-    
+
+    <!-- Email -->
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etEmail_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
+        android:layout_below="@id/UserNameId_"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/UserNameId"
         android:background="@drawable/edit_text_bg"
-        android:padding="12dp"
-        android:drawablePadding="8dp" />
+        android:drawablePadding="8dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:padding="12dp" />
 
     <!-- Password -->
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etPassword_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etEmail"
+        android:layout_below="@id/etEmail_"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_bg"
@@ -112,28 +141,23 @@
         android:text="@string/terms_text"
         android:textSize="16sp"
         android:textColor="@color/black"
-        android:layout_marginStart="40dp"
-        android:layout_below="@id/etPassword"
+        android:layout_below="@id/etPassword_"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:paddingHorizontal="16dp" />
 
-    <!-- Terms and Privacy Policy -->
+
     <Button
-        android:id="@+id/btnContinue"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_below="@id/tvTerms"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
         android:backgroundTint="#0071DC"
-        android:enabled="false"
-        android:text="SIGNUP"
-        android:textColor="#FFFFFF" />
-
+        android:text="Signup"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
-
-

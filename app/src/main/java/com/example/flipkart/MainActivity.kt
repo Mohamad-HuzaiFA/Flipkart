@@ -1,47 +1,60 @@
 package com.example.flipkart
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.flipkart.ui.theme.FlipKartTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private  lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        supportActionBar?.hide() //To hide the toolbar at the top
+
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            FlipKartTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+        setContentView(R.layout.activity_main)
+
+
+        bottomNavigationView = findViewById(R.id.bottom_nav)
+
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when(menuItem.itemId){
+                R.id.homeFragment_ -> {
+                    replaceFragment(HomeFragment())
+                    true
                 }
+
+                R.id.categoryFragment_ -> {
+                    replaceFragment(CategoryFragment())
+                    true
+                }
+                R.id.exploreFragment_ -> {
+                    replaceFragment(ExploreFragment())
+                    true
+                }
+                R.id.profileFragment_ -> {
+                    replaceFragment(ProfileFragment())
+                    true
+                }
+
+                R.id.cartFragment_-> {
+                    replaceFragment(CartFragment())
+                    true
+                }
+                else -> false
             }
         }
+
+        replaceFragment(HomeFragment())
+
+
+    }
+
+    private fun replaceFragment(fragment:Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.frame_container,fragment).commit()
+
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FlipKartTheme {
-        Greeting("Android")
-    }
-}

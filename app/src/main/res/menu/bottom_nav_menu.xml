@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment_"
+        android:title="Home"
+        android:icon="@drawable/outline_home_24" />
+    <item
+        android:id="@+id/categoryFragment_"
+        android:title="Category"
+        android:icon="@drawable/outline_category_24" />
+    <item
+        android:id="@+id/exploreFragment_"
+        android:title="Explore"
+        android:icon="@drawable/outline_explore_24" />
+    <item
+        android:id="@+id/profileFragment_"
+        android:title="Profile"
+        android:icon="@drawable/outline_account_circle_24" />
+
+    <item
+        android:id="@+id/cartFragment_"
+        android:title="Cart"
+        android:icon="@drawable/outline_add_shopping_cart_24" />
+</menu>
