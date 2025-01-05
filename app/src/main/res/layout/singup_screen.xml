@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="LoginActivity">
+    tools:context="SignupActivity">
 
-    <!-- Blue background with logo -->
+
     <RelativeLayout
-        android:id="@+id/blueBackgrounddiv"
+        android:id="@+id/blueBackgrounddiv_"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#0071DC"
@@ -22,7 +22,7 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:id="@+id/flipkartText"
+                android:id="@+id/flipkartText_"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="9dp"
@@ -34,18 +34,18 @@
                 android:textStyle="italic" />
 
             <ImageView
-                 android:id="@+id/logoImageView"
-                 android:layout_width="70dp"
-                 android:layout_height="wrap_content"
-                 android:src="@drawable/flipkart_logo2"/>
+                android:id="@+id/logoImageView_"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flipkart_logo2"/>
 
-        <!-- Flipkart Text -->
+            <!-- Flipkart Text -->
 
 
         </LinearLayout>
         <!-- Skip Arrow Icon and Text -->
         <ImageView
-            android:id="@+id/skipIcon"
+            android:id="@+id/skipIcon_"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
@@ -59,7 +59,7 @@
             android:id="@+id/skipText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/skipIcon"
+            android:layout_below="@id/skipIcon_"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
             android:text="Skip"
@@ -68,38 +68,53 @@
 
     </RelativeLayout>
 
-    <!-- Initial description -->
+
     <TextView
-        android:id="@+id/Initial_Description"
+        android:id="@+id/Initial_Descriptionsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/blueBackgrounddiv"
+        android:layout_below="@id/blueBackgrounddiv_"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@android:color/black"
-        android:text="@string/initDescription"
-        android:textSize="20sp" />
+        android:textColor="@color/black"
+        android:text="Sign up to create an Account"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium" />
 
     <TextView
-        android:id="@+id/Initial_Description_2"
+        android:id="@+id/Initial_Descriptionsignup_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Initial_Description"
+        android:layout_below="@id/Initial_Descriptionsignup"
         android:layout_marginStart="30dp"
         android:layout_marginTop="7dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/initDescription_2"
-        android:textSize="16sp" />
+        android:text="Enter the required Information."
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
 
-    <!-- Phone Number Input -->
+<!--     UserName -->
     <EditText
-        android:id="@+id/logInEmail"
+        android:id="@+id/UserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Initial_Description_2"
+        android:layout_below="@id/Initial_Descriptionsignup_2"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableLeft="@drawable/baseline_person_outline_24"
+        android:drawablePadding="8dp"
+        android:hint="UserName"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/signUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserName"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_bg"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="8dp"
@@ -109,10 +124,10 @@
 
     <!-- Email Input -->
     <EditText
-        android:id="@+id/logInPassword"
+        android:id="@+id/signUpPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logInEmail"
+        android:layout_below="@id/signUpEmail"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_bg"
@@ -122,46 +137,44 @@
         android:inputType="textPassword"
         android:padding="12dp" />
 
-    <!-- Terms Text -->
     <TextView
         android:id="@+id/tvTerms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logInPassword"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
-        android:layout_centerHorizontal="true"
         android:text="@string/terms_text"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
+        android:layout_below="@id/signUpPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:paddingHorizontal="16dp" />
 
-    <!-- Login Button -->
 
-    <!-- Sign Up Option -->
     <Button
-        android:id="@+id/btnContinue"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_alignBottom="@id/toSignupScreen"
-        android:layout_marginBottom="22dp"
         android:backgroundTint="#0071DC"
-        android:text="LOGIN"
+        android:layout_above="@+id/loginRedirectText"
+        android:text="Signup"
         android:textColor="@android:color/white" />
 
     <TextView
-        android:id="@+id/toSignupScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/loginRedirectText"
+        android:text="Already an user? Login"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="Not yet registered? Sign Up"
+        android:layout_gravity="center"
+        android:textAlignment="center"
         android:textColor="#0071DC"
-        android:textSize="16sp" />
+        android:padding="4dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="18sp"/>
 
 </RelativeLayout>
-
